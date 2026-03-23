@@ -1372,7 +1372,8 @@
                 </div>
             </div>
 
-            <form class="contact-form reveal" id="contactForm">
+            <form class="contact-form reveal" id="contactForm"
+                action="https://formsubmit.co/thiseansandeepa14@gmail.com" method="POST">
                 <div class="form-row">
                     <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname"
                             placeholder="John"></div>
@@ -1431,12 +1432,7 @@
         function type() { const w = roles[ri]; tw.textContent = del ? w.slice(0, ci--) : w.slice(0, ci++); if (!del && ci > w.length) { del = true; setTimeout(type, 1200); return; } if (del && ci < 0) { del = false; ri = (ri + 1) % roles.length; ci = 0; } setTimeout(type, del ? 60 : 100); }
         type();
 
-        // CONTACT FORM
-        document.getElementById('contactForm').addEventListener('submit', e => {
-            e.preventDefault(); const btn = e.target.querySelector('.form-submit');
-            btn.textContent = 'Message Sent! ✓'; btn.style.background = '#00cc66'; btn.style.boxShadow = '0 0 2rem rgba(0,204,102,0.4)';
-            setTimeout(() => { btn.innerHTML = 'Send Message <i class="fas fa-paper-plane" style="margin-left:.6rem"></i>'; btn.style.background = ''; btn.style.boxShadow = ''; e.target.reset(); }, 3000);
-        });
+
     </script>
 </body>
 
