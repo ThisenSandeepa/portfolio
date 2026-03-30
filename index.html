@@ -227,13 +227,15 @@
             color: #07090f;
             font-weight: 700;
             letter-spacing: .06em;
-            transition: box-shadow .3s, transform .3s;
-            box-shadow: 0 0 2rem var(--blue-glow);
+            transition: all .4s cubic-bezier(0.25, 1, 0.5, 1);
+            animation: neonPulse 3s infinite alternate;
+            border: 2px solid transparent;
         }
 
         .btn:hover {
-            box-shadow: 0 0 4rem var(--blue-glow);
-            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(0, 170, 255, 0.8), 0 0 50px rgba(0, 170, 255, 0.5);
+            transform: translateY(-3px) scale(1.02);
+            border-color: #fff;
         }
 
         .btn-outline {
@@ -245,14 +247,18 @@
             color: var(--blue);
             font-weight: 600;
             letter-spacing: .06em;
-            transition: background .3s, color .3s, box-shadow .3s, transform .3s;
+            transition: all .3s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+            text-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
         }
 
         .btn-outline:hover {
             background: var(--blue);
             color: #07090f;
-            box-shadow: 0 0 2rem var(--blue-glow);
-            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 170, 255, 0.8), 0 0 40px rgba(0, 170, 255, 0.4);
+            transform: translateY(-3px) scale(1.02);
+            border-color: #fff;
+            text-shadow: none;
         }
 
         .social-icons {
@@ -271,15 +277,15 @@
             border-radius: 50%;
             font-size: 1.7rem;
             color: var(--text-muted);
-            transition: .3s;
+            transition: all .3s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         .social-icons a:hover {
             background: var(--blue);
-            border-color: var(--blue);
+            border-color: #fff;
             color: #07090f;
-            box-shadow: 0 0 1.5rem var(--blue-glow);
-            transform: translateY(-4px);
+            box-shadow: 0 0 15px rgba(0, 170, 255, 0.8), 0 0 30px rgba(0, 170, 255, 0.5);
+            transform: translateY(-6px) scale(1.1);
         }
 
         .home-img {
@@ -326,6 +332,7 @@
 
         .heading span {
             color: var(--blue);
+            animation: neonText 3s infinite alternate;
         }
 
         .section-sub {
@@ -555,12 +562,29 @@
             border-radius: 1.2rem;
             padding: 2.5rem;
             flex: 1;
-            transition: transform .3s, box-shadow .3s;
+            transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .edu-content::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 1.2rem;
+            box-shadow: inset 0 0 0 2px transparent;
+            transition: box-shadow .4s;
+            pointer-events: none;
+            z-index: 10;
         }
 
         .edu-content:hover {
-            transform: translateX(5px);
-            box-shadow: 0 .5rem 2rem rgba(0, 170, 255, 0.08);
+            transform: translateX(10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.15), 0 0 15px rgba(0, 170, 255, 0.3);
+            border-color: var(--blue);
+        }
+
+        .edu-content:hover::before {
+            box-shadow: inset 0 0 0 2px rgba(0, 170, 255, 0.3);
         }
 
         .edu-year {
@@ -598,12 +622,29 @@
             border-radius: 1.2rem;
             border: 1px solid var(--border);
             overflow: hidden;
-            transition: transform .3s, box-shadow .3s;
+            transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 1.2rem;
+            box-shadow: inset 0 0 0 2px transparent;
+            transition: box-shadow .4s;
+            pointer-events: none;
+            z-index: 10;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 2rem 4rem rgba(0, 170, 255, 0.12);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.2), 0 0 20px rgba(0, 170, 255, 0.4);
+            border-color: var(--blue);
+        }
+
+        .project-card:hover::before {
+            box-shadow: inset 0 0 0 2px rgba(0, 170, 255, 0.3);
         }
 
         .project-thumb {
@@ -730,12 +771,29 @@
             display: flex;
             gap: 2rem;
             align-items: flex-start;
-            transition: transform .3s, box-shadow .3s;
+            transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 1.2rem;
+            box-shadow: inset 0 0 0 2px transparent;
+            transition: box-shadow .4s;
+            pointer-events: none;
+            z-index: 10;
         }
 
         .cert-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 1rem 2rem rgba(0, 170, 255, 0.1);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.15), 0 0 15px rgba(0, 170, 255, 0.3);
+            border-color: var(--blue);
+        }
+
+        .cert-card:hover::before {
+            box-shadow: inset 0 0 0 2px rgba(0, 170, 255, 0.3);
         }
 
         .cert-icon {
@@ -1021,16 +1079,40 @@
         /* REVEAL */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity .7s, transform .7s;
+            transform: translateY(40px) scale(0.95);
+            transition: opacity .8s cubic-bezier(0.25, 1, 0.5, 1), transform .8s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         .reveal.visible {
             opacity: 1;
-            transform: none;
+            transform: translateY(0) scale(1);
+        }
+        
+        @keyframes neonPulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(0, 170, 255, 0.4), 0 0 20px rgba(0, 170, 255, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(0, 170, 255, 0.7), 0 0 40px rgba(0, 170, 255, 0.5), 0 0 60px rgba(0, 170, 255, 0.3); }
+        }
+        
+        @keyframes neonText {
+            0%, 100% { text-shadow: 0 0 8px rgba(0, 170, 255, 0.4); }
+            50% { text-shadow: 0 0 15px rgba(0, 170, 255, 0.8), 0 0 30px rgba(0, 170, 255, 0.5); }
         }
 
         /* CURSOR */
+        .cursor-glow {
+            width: 40vw;
+            height: 40vw;
+            max-width: 600px;
+            max-height: 600px;
+            background: radial-gradient(circle at center, rgba(0, 170, 255, 0.06) 0%, transparent 60%);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.5s ease;
+        }
+
         .cursor-dot {
             width: 6px;
             height: 6px;
@@ -1059,6 +1141,7 @@
 
 <body>
 
+    <div class="cursor-glow" id="cursorGlow"></div>
     <div class="cursor-dot" id="cursorDot"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
@@ -1415,10 +1498,10 @@
 
     <script>
         // CURSOR
-        const dot = document.getElementById('cursorDot'), ring = document.getElementById('cursorRing');
+        const dot = document.getElementById('cursorDot'), ring = document.getElementById('cursorRing'), glow = document.getElementById('cursorGlow');
         let mx = 0, my = 0, rx = 0, ry = 0;
         document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-        function animCursor() { rx += (mx - rx) * .15; ry += (my - ry) * .15; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animCursor); }
+        function animCursor() { rx += (mx - rx) * .15; ry += (my - ry) * .15; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; if(glow) { glow.style.left = rx + 'px'; glow.style.top = ry + 'px'; } requestAnimationFrame(animCursor); }
         animCursor();
 
         // HEADER SCROLL
