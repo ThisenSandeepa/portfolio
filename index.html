@@ -569,7 +569,10 @@
         .edu-content::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             border-radius: 1.2rem;
             box-shadow: inset 0 0 0 2px transparent;
             transition: box-shadow .4s;
@@ -629,7 +632,10 @@
         .project-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             border-radius: 1.2rem;
             box-shadow: inset 0 0 0 2px transparent;
             transition: box-shadow .4s;
@@ -778,7 +784,10 @@
         .cert-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             border-radius: 1.2rem;
             box-shadow: inset 0 0 0 2px transparent;
             transition: box-shadow .4s;
@@ -1087,15 +1096,29 @@
             opacity: 1;
             transform: translateY(0) scale(1);
         }
-        
+
         @keyframes neonPulse {
-            0%, 100% { box-shadow: 0 0 10px rgba(0, 170, 255, 0.4), 0 0 20px rgba(0, 170, 255, 0.2); }
-            50% { box-shadow: 0 0 20px rgba(0, 170, 255, 0.7), 0 0 40px rgba(0, 170, 255, 0.5), 0 0 60px rgba(0, 170, 255, 0.3); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(0, 170, 255, 0.4), 0 0 20px rgba(0, 170, 255, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(0, 170, 255, 0.7), 0 0 40px rgba(0, 170, 255, 0.5), 0 0 60px rgba(0, 170, 255, 0.3);
+            }
         }
-        
+
         @keyframes neonText {
-            0%, 100% { text-shadow: 0 0 8px rgba(0, 170, 255, 0.4); }
-            50% { text-shadow: 0 0 15px rgba(0, 170, 255, 0.8), 0 0 30px rgba(0, 170, 255, 0.5); }
+
+            0%,
+            100% {
+                text-shadow: 0 0 8px rgba(0, 170, 255, 0.4);
+            }
+
+            50% {
+                text-shadow: 0 0 15px rgba(0, 170, 255, 0.8), 0 0 30px rgba(0, 170, 255, 0.5);
+            }
         }
 
         /* CURSOR */
@@ -1183,15 +1206,17 @@
         </div>
     </section>
 
-        <!-- CV DOWNLOAD SECTION -->
-        <section id="cv-download" class="cv-section" style="background: var(--bg2); padding: 6rem 9% 4rem; text-align: center;">
-            <h2 class="heading reveal">Download <span>My CV</span></h2>
-            <p class="section-sub reveal">Get my latest CV as a PDF</p>
-            <a href="assets/Thisen Sandeepa.pdf" download class="btn" style="margin-top:2rem; font-size:1.7rem;">Download CV (PDF)</a>
-        </section>
+    <!-- CV DOWNLOAD SECTION -->
+    <section id="cv-download" class="cv-section"
+        style="background: var(--bg2); padding: 6rem 9% rem; text-align: center; min-height: auto;">
+        <h2 class="heading reveal">Download <span>My CV</span></h2>
+        <p class="section-sub reveal">Get my latest CV as a PDF</p>
+        <a href="assets/Thisen Sandeepa.pdf" download class="btn" style="margin-top:2rem; font-size:1.7rem;">Download CV
+            (PDF)</a>
+    </section>
 
     <!-- ABOUT -->
-    <section class="about" id="about">
+    <section class="about" id="about" style="padding-top: 4rem;">
         <h2 class="heading reveal">About <span>Me</span></h2>
         <p class="section-sub reveal">Computer Science Undergraduate · University of Westminster, UK</p>
         <div class="about-grid">
@@ -1501,7 +1526,7 @@
         const dot = document.getElementById('cursorDot'), ring = document.getElementById('cursorRing'), glow = document.getElementById('cursorGlow');
         let mx = 0, my = 0, rx = 0, ry = 0;
         document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-        function animCursor() { rx += (mx - rx) * .15; ry += (my - ry) * .15; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; if(glow) { glow.style.left = rx + 'px'; glow.style.top = ry + 'px'; } requestAnimationFrame(animCursor); }
+        function animCursor() { rx += (mx - rx) * .15; ry += (my - ry) * .15; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; if (glow) { glow.style.left = rx + 'px'; glow.style.top = ry + 'px'; } requestAnimationFrame(animCursor); }
         animCursor();
 
         // HEADER SCROLL
