@@ -157,8 +157,9 @@
             background: url('assets/circuit_bg.png') no-repeat center center;
             background-size: cover;
             z-index: 1;
-            opacity: 0.5;
-            filter: brightness(1.8) contrast(1.2);
+            mix-blend-mode: screen;
+            opacity: 0.8;
+            filter: contrast(3) brightness(1.5) saturate(2);
             -webkit-mask-image: radial-gradient(circle at center, transparent 30%, black 50%, transparent 70%);
             mask-image: radial-gradient(circle at center, transparent 30%, black 50%, transparent 70%);
             -webkit-mask-repeat: no-repeat;
@@ -175,12 +176,15 @@
                 mask-size: 0% 0%;
                 opacity: 0;
             }
+
             15% {
                 opacity: 0.8;
             }
+
             85% {
                 opacity: 0.8;
             }
+
             100% {
                 -webkit-mask-size: 350% 350%;
                 mask-size: 350% 350%;
@@ -1328,12 +1332,15 @@
                 <div class="project-info">
                     <div class="project-tag">Web App · 2026</div>
                     <div class="project-title">UD Travels</div>
-                    <div class="project-desc">Website developed for one of the biggest vehicle suppliers in Sri Lanka. Features a fleet showcase, booking system, and professional business landing page.</div>
+                    <div class="project-desc">Website developed for one of the biggest vehicle suppliers in Sri Lanka.
+                        Features a fleet showcase, booking system, and professional business landing page.</div>
                     <div class="project-techs"><span class="p-tech">HTML</span><span class="p-tech">CSS</span><span
                             class="p-tech">JavaScript</span><span class="p-tech">Responsive Web</span></div>
                     <div class="project-links">
-                        <a href="https://github.com/ThisenSandeepa" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="http://udtravels.lk" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/ThisenSandeepa" target="_blank" class="project-link"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="http://udtravels.lk" target="_blank" class="project-link"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -1351,8 +1358,10 @@
                     <div class="project-techs"><span class="p-tech">HTML</span><span class="p-tech">CSS</span><span
                             class="p-tech">JavaScript</span><span class="p-tech">Responsive Web</span></div>
                     <div class="project-links">
-                        <a href="https://github.com/ThisenSandeepa" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://elitewingtravels.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/ThisenSandeepa" target="_blank" class="project-link"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="https://elitewingtravels.com" target="_blank" class="project-link"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
                     </div>
                 </div>
             </div>
