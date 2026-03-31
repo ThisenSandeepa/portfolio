@@ -366,12 +366,43 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 6rem;
-            align-items: start;
+            align-items: center;
             margin-top: 2rem;
         }
 
         .about-img-wrap {
             position: relative;
+            width: 75%;
+            margin: 0 auto;
+            border-radius: 1.5rem;
+        }
+
+        .about-img-wrap::before,
+        .about-img-wrap::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(80deg, transparent 0%, rgba(0, 170, 255, 0.8) 25%, transparent 50%, rgba(0, 170, 255, 0.8) 75%, transparent 100%);
+            background-size: 200% 200%;
+            border-radius: 1.7rem;
+            z-index: -1;
+            animation: elecGlow 3s linear infinite;
+        }
+
+        .about-img-wrap::after {
+            filter: blur(12px);
+            opacity: 0.8;
+            inset: -6px;
+        }
+
+        @keyframes elecGlow {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 200% 200%;
+            }
         }
 
 
