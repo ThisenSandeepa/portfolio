@@ -194,6 +194,7 @@
 
         .home-content {
             max-width: 80rem;
+            width: 100%;
             z-index: 2;
             animation: fadeInUp .8s ease both;
             display: flex;
@@ -221,7 +222,7 @@
         }
 
         .home-content h1 {
-            font-size: 5.6rem;
+            font-size: clamp(3.6rem, 5vw, 5.6rem);
             font-weight: 800;
             line-height: 1.1;
             margin: .6rem 0;
@@ -366,13 +367,13 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 6rem;
-            align-items: center;
+            align-items: flex-start;
             margin-top: 2rem;
         }
 
         .about-img-wrap {
             position: relative;
-            width: 75%;
+            width: 90%;
             margin: 0 auto;
             border-radius: 1.5rem;
         }
@@ -1088,13 +1089,69 @@
         }
 
         /* RESPONSIVE */
+
+        /* Laptop screens (1024px - 1440px) */
+        @media(max-width:1440px) {
+            html {
+                font-size: 60%;
+            }
+
+            .home-content {
+                max-width: 65rem;
+            }
+
+            .home-content p {
+                max-width: 45rem;
+            }
+
+            .about-img-wrap {
+                width: 95%;
+            }
+        }
+
         @media(max-width:1100px) {
+            html {
+                font-size: 58%;
+            }
+
+            .home-content {
+                max-width: 55rem;
+            }
+
+            .home-content p {
+                max-width: 40rem;
+            }
+
             .portfolio-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
             .cert-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .about-img-wrap {
+                width: 100%;
+            }
+
+            .about-grid {
+                gap: 4rem;
+            }
+
+            .home-content h1 {
+                font-size: clamp(3.6rem, 5vw, 5.2rem);
+            }
+
+            .greeting {
+                font-size: 2.2rem;
+            }
+
+            .role {
+                font-size: 2.2rem;
+            }
+
+            .role span {
+                font-size: 1.8rem;
             }
         }
 
@@ -1106,6 +1163,10 @@
             .about-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .about-img-wrap {
+                width: 70%;
             }
 
             .home-img {
@@ -1144,6 +1205,10 @@
             .navbar a {
                 margin-left: 2rem;
                 font-size: 1.3rem;
+            }
+
+            .about-img-wrap {
+                width: 80%;
             }
         }
 
@@ -1282,7 +1347,7 @@
             <div class="about-img-wrap reveal">
                 <div class="about-img-box">
                     <img src="assets/profile.jpg" alt="Thisen Sandeepa"
-                        style="width:100%;height:80%;object-fit:cover;object-position:center 10%;border-radius:1.5rem;">
+                        style="width:100%;height:100%;object-fit:cover;object-position:center 10%;border-radius:1.5rem;">
 
                 </div>
                 <div class="about-corner tl"></div>
@@ -1573,17 +1638,17 @@
             <form class="contact-form reveal" id="contactForm"
                 action="https://formsubmit.co/thiseansandeepa14@gmail.com" method="POST">
                 <div class="form-row">
-                    <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="First Name" required
-                            placeholder="John"></div>
-                    <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="Last Name" required
-                            placeholder="Doe"></div>
+                    <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname"
+                            name="First Name" required placeholder="John"></div>
+                    <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname"
+                            name="Last Name" required placeholder="Doe"></div>
                 </div>
-                <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="Email" required
-                        placeholder="john@example.com"></div>
-                <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="_subject" required
-                        placeholder="Internship / Project Inquiry"></div>
-                <div class="form-group"><label for="message">Message</label><textarea id="message" name="Message" required
-                        placeholder="Tell me about your opportunity or project..."></textarea></div>
+                <div class="form-group"><label for="email">Email Address</label><input type="email" id="email"
+                        name="Email" required placeholder="john@example.com"></div>
+                <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject"
+                        name="_subject" required placeholder="Internship / Project Inquiry"></div>
+                <div class="form-group"><label for="message">Message</label><textarea id="message" name="Message"
+                        required placeholder="Tell me about your opportunity or project..."></textarea></div>
                 <button type="submit" class="form-submit">Send Message <i class="fas fa-paper-plane"
                         style="margin-left:.6rem"></i></button>
             </form>
